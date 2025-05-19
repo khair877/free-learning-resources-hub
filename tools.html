@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Free Learning Resources Hub</title>
+  <style>
+    body {
+      background-color: #f5f5dc; /* Beige background */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    section.resources {
+      background-color: #f9f3e3; /* Light Beige */
+      padding: 40px;
+    }
+    section.resources h2 {
+      text-align: center;
+      color: #6f4f37; /* Brown */
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .resources-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .resource-box {
+      flex: 1 1 300px;
+      background-color: #fff8e1; /* Light Beige */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .resource-box:hover {
+      transform: translateY(-10px);
+      background-color: #f5e3c7; /* Slightly darker beige */
+    }
+    .resource-box h3 {
+      color: #6f4f37; /* Brown */
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+    .tool-section {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #c0a080; /* Light brown border */
+      border-radius: 8px;
+      background-color: #f8f1e1; /* Light beige background */
+    }
+    .tool-section strong {
+      display: block;
+      font-size: 1.1em;
+      color: #3e2723; /* Dark brown */
+      margin-bottom: 10px;
+    }
+    .tool-section ul {
+      list-style-type: none;
+      padding-left: 15px;
+    }
+    .tool-section li {
+      margin: 8px 0;
+      font-size: 1em;
+    }
+    .tool-section a {
+      color: #1e3a5f; /* Dark blue */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .tool-section a:hover {
+      text-decoration: underline;
+      color: #6f4f37; /* Brown */
+    }
+    .tool-section i {
+      margin-right: 10px;
+      font-size: 1.2em;
+      color: #6f4f37; /* Brown for icons */
+    }
+
+    /* Responsive columns for mobile */
+    @media (max-width: 768px) {
+      .resource-box {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Navbar styles */
+    .navbar {
+            background-color: rgba(27, 3, 70, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+    
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+    
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+        }
+    
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background-color: #ffcb05;
+            transition: width 0.3s ease;
+        }
+    
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    
+
+    .auth-buttons button {
+      background-color: #6f4f37; /* Brown */
+      color: #fff;
+      padding: 8px 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .auth-buttons button:hover {
+      background-color: #8d6e46; /* Lighter Brown */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="home.html">🏠 Home</a></li>
+      <li><a href="index.html">📚 Courses</a></li>
+      <li><a href="resources.html">📂 Resources</a></li>
+      <li><a href="tools.html">🛠 Tools</a></li>
+    </ul>
+    <div class="auth-buttons">
+      <button onclick="window.location.href='signin.html'">Create Account / Sign In</button>
+    </div>
+  </nav>
+
+  <section class="resources">
+    <h2>🌐 Featured Free Learning Resources</h2>
+    <div class="resources-container">
+      <div class="resource-box">
+        <h3>🛠 Tools for Learners</h3>
+
+        <div class="tool-section">
+          <strong>Note-taking & Productivity</strong>
+          <ul>
+            <li><i class="fas fa-book"></i><a href="https://www.notion.so/" target="_blank">Notion</a> – All-in-one workspace</li>
+            <li><i class="fas fa-file-alt"></i><a href="https://evernote.com/" target="_blank">Evernote</a> – Organize study notes</li>
+            <li><i class="fas fa-pencil-alt"></i><a href="https://keep.google.com/" target="_blank">Google Keep</a> – Quick notes/reminders</li>
+          </ul>
+        </div>
+
+        <div class="tool-section">
+          <strong>Study & Focus Tools</strong>
+          <ul>
+            <li><i class="fas fa-clock"></i><a href="https://pomofocus.io/" target="_blank">Pomofocus</a> – Pomodoro timer</li>
+            <li><i class="fas fa-tree"></i><a href="https://www.forestapp.cc/" target="_blank">Forest App</a> – Grow focus trees</li>
+            <li><i class="fas fa-ban"></i><a href="https://getcoldturkey.com/" target="_blank">Cold Turkey</a> – Block distractions</li>
+          </ul>
+        </div>
+
+        <div class="tool-section">
+          <strong>Language Learning</strong>
+          <ul>
+            <li><i class="fas fa-language"></i><a href="https://www.duolingo.com/" target="_blank">Duolingo</a> – Learn languages</li>
+            <li><i class="fas fa-globe"></i><a href="https://www.memrise.com/" target="_blank">Memrise</a> – Real-world language practice</li>
+            <li><i class="fas fa-english"></i><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a> – English lessons</li>
+          </ul>
+        </div>
+
+        <div class="tool-section">
+          <strong>Citation & Writing Help</strong>
+          <ul>
+            <li><i class="fas fa-quote-left"></i><a href="https://www.zotero.org/" target="_blank">Zotero</a> – Citation manager</li>
+            <li><i class="fas fa-bookmark"></i><a href="https://www.mendeley.com/" target="_blank">Mendeley</a> – Reference tool</li>
+            <li><i class="fas fa-check-circle"></i><a href="https://www.grammarly.com" target="_blank">Grammarly</a> – Grammar checker</li>
+          </ul>
+        </div>
+
+        <div class="tool-section">
+          <strong>Visualization & Mind Mapping</strong>
+          <ul>
+            <li><i class="fas fa-brain"></i><a href="https://www.mindmeister.com/" target="_blank">MindMeister</a> – Mind maps</li>
+            <li><i class="fas fa-palette"></i><a href="https://www.canva.com/" target="_blank">Canva</a> – Design & infographics</li>
+            <li><i class="fas fa-project-diagram"></i><a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a> – Diagrams & flowcharts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FontAwesome for Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

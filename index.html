@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Learning Resources Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: url('images/mainbg.avif') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: #1b1b1b;
+        }
+    
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #ccc;
+        }
+    
+        .title {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #6F4E37;
+        }
+    
+        .navbar {
+            background-color: rgba(27, 3, 70, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+    
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+    
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+        }
+    
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background-color: #ffcb05;
+            transition: width 0.3s ease;
+        }
+    
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    
+        .auth-buttons button {
+            background-color: #6f4f37; /* Brown */
+            color: #fff;
+            padding: 8px 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #8d6e46; /* Lighter Brown */
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+    
+        h1 {
+            font-size: 3.2em;
+            color: #6F4E37;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+    
+        p {
+            font-size: 1.2em;
+            color: #1b1b1b;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+    
+        .button {
+            background-color: #1b0346;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    
+        .button:hover {
+            background-color: #6F4E37;
+            transform: translateY(-2px);
+        }
+    
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px 20px;
+            gap: 20px;
+        }
+    
+        .column {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color :#f8f1e4;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+    
+        .column:hover {
+            transform: translateY(-5px);
+        }
+    
+        h2 {
+            font-size: 1.8em;
+            color: #1b0346;
+            margin-bottom: 15px;
+        }
+    
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        li {
+            color: #0d1050;
+            margin: 6px 0;
+            font-size: 1em;
+        }
+    
+        li strong {
+            color: #000;
+        }
+    
+        .image {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    
+        @media screen and (max-width: 992px) {
+            .column {
+                flex: 1 1 100%;
+            }
+    
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+    
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="title">Free Learning Resources Hub | FreeLearn</div>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="home.html">🏠 Home</a></li>
+          <li><a href="index.html">📚 Courses</a></li>
+          <li><a href="resources.html">📂 Resources</a></li>
+          <li><a href="tools.html">🛠 Tools</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button onclick="window.location.href='signin.html'">Create Account / Sign In</button>
+        </div>
+      </nav>
+      
+    <div class="container">
+        <div class="content">
+            <h1><em>About FreeLearn</em></h1>
+            <p><i>◑Massive Open Online Courses (FreeLearn) are <a href="#" style="color: #ffcb05;">free online courses</a> available for anyone to enroll. </p>
+            <p>◑FreeLearn provides an affordable and flexible way to learn new skills, advance your career, and deliver quality educational experiences at scale.</p>
+            <p>◑Millions of people around the world use FreeLearn to learn for a variety of reasons, including career development, changing careers, college</p>
+            <p>preparations,supplemental learning, lifelong learning, corporate eLearning & training, and more </p>
+            <p>◑FreeLearn has dramatically changed the way the world learns. Ready to get started?<i></p>
+            <a href="#" class="button" id="showCourses">Take free courses</a>
+
+        </div>
+    </div>
+    
+    <div id="coursesSection" style="display: none;">
+    
+    <div class="container" id="course-list">
+        <div class="column">
+            <h2><i>Chemistry courses</i></h2>
+            <img src="images/chemistry.jpeg" alt="chemistry courses">
+            <ul>
+                <li  id="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Biochemistry
+                </li>
+                <div id="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=QCG-d-VTTE43btH8&amp;list=PLJY2Tv4-MRcaTa2rdIqq_y4U5g5ogkQVT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Geochemistry 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=5jKNtZbXrv_icQJW&amp;list=PL69bBhmsrgfuvUtxLcrDwRb6BYS0oH0DN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Nanotechnology 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=w3zecCJPo9muU6UM&amp;list=PLMlC7Vx5awsenMs5y02xcW6i5NmdEIRGx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Physical Chemistry 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=WE3vTgDhRm8fxvC4&amp;list=PLxyGaR3hEy3gmAAC3q7jH4W6QMrBsmyzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Quantum Detection
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=3TfxPd3K7plId8Sl&amp;list=PLq-Gm0yRYwThGmlypvSFQ-kT2rPaXKAZ5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Spectroscopy 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=786fWq6NtYGJ8kOY&amp;list=PLLf6O8XdGj03ktP4MHmIV87pHZHBEUF6f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>Computer Programming courses</i></h2>
+            <img src="images/computer programming.jpeg" alt="computer programming courses">
+            <ul>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    C Programming
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=6A-xQIahwjh9LZvy&amp;list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    C++ 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=SVN6xuq6ENO7NduH&amp;list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;">
+                     Linux Command Line
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=ehMTtU5_9ZdQwYuC&amp;list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;">
+                    JavaScript
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=-Rx6m2cN4ZYRakkE&amp;list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Java
+                </li> 
+                <div class="video-container" style="display: none; margin-top: 10px;">   
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=Rx2R_Vb45wdiWDnG&amp;list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Python
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=thnewG0nBkWLhL5Q&amp;list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    R Programming
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=ajAh50eh8c_OOqCc&amp;list=PLjVLYmrlmjGdmPrz0Lx7smkd0qIKHInOF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;">
+                    Scala
+                </li> 
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=23O7u3XBtqk1fHLI&amp;list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h2><i>Computer Science Courses</i></h2>
+            <img src="images/computer science.jpeg" alt="computer science courses">
+            <ul>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Compilers
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=5I01xPMdVPbDIB4W&amp;list=PL6KMWPQP_DM97Hh0PYNgJord-sANFTI3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;">
+                    Computer Architecture 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=2CEkPhcNA9Ode11w&amp;list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Computer Graphics 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=OARiZ1BdKMkcVMMe&amp;list=PLYwpaL_SFmcAtxMe7ahYC4ZYjQHun_b-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Computer Hardware 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=gUjyaBUmH88jh13t&amp;list=PLS0spxc8nUsAt5iBvXjRlzr4fsep5Ov-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Computer Networking 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=UBJC_NVo-MtWAFFj&amp;list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Computer Security
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=4caG6wJ7chac1ln9&amp;list=PLEiEAq2VkUUJfPOj5nRounXvf3n17PCft" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Data Structures 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=D1cOPtS4Bh1GRw99&amp;list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Human-Computer Interaction 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=b0iVM5w1V-gDl4HO&amp;list=PLQ-nEJNYlEV1CfTcLCx_S7D2of3QAsvTT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Operating Systems
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=ejocx6uH7HOsOqIJ&amp;list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>Creative Arts courses</i></h2>
+            <img src="images/creative arts.jpeg" alt="creative Arts courses">
+            <ul>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Animation
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=Cd9Jct08YwWBn-dq&amp;list=PLNSuDi1DoGJz6sGYaHXgbYNQ_StJpY6m7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>    
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Creative Writing
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=60Jr912fuZ4Fmv08&amp;list=PLS3Gm3vhh6iQEhcBEu7eHAYJmBFTfvq0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Literature 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=IDrTS_FL2dO4cfl2&amp;list=PLwxNMb28Xmpfv2COuuJaKzy6E2n8nSMdi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Pottery
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=qOUfpxPm21hxhOI8&amp;list=PL2WJhtTF0eGhQwf8g2LHcom_KrvJpH_JT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Video Game Design 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=scc0WTYBFlc6Z5x7&amp;list=PLhqJJNjsQ7KHI3oYZfZ9nLEnQMBEhbmP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Drawing
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=9Re37ktwBlEa997c&amp;list=PLjNF5C_hGyuIkgD4Qdr53tyL3fIxGI05D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>Current Events course</i></h2>
+            <img src="images/current events.jpeg" alt=" current event courses">
+            <ul>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Capitalism
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/0bmX0hZoiJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Climate Change 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/dcBXmj1nMTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;">
+                Gender Studies 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=CUB6uW3WNBA_jzAZ&amp;list=PL2QYOrBMOd7-Jw6OA78pfp4B0oIDhsqwF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Globalization
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=xDFZXPSrwbboGC__&amp;list=PL8r7XLpeUO8SNMo-mqf8EEZ6xCnSgWibl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Government 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=QOuTMw9hZj7y_4M&amp;list=PL3e9eDReH7y6WMtu-jUjJFp_FLYpT5YVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Inequality 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=gyTETLgSL2HBEDxN&amp;list=PLeqmziKeRIUHk2bq5WVtaZhiddJcRWs4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;"> 
+                    Politics
+                </li>
+                    <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?&amp;list=PLh9mgdi4rNeyViG2ar68jkgEi4y6doNZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li class="course-title" style="cursor: pointer; color:#6F4E37; text-decoration: underline;">
+                    Race & Racism 
+                </li>
+                 <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=2uFGg51NsydUhxDx&amp;list=PLBD25F9352F218351" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>Humanities Courses</i></h2>
+            <img src="images/humanities.jpeg" alt=" Humanities couses">
+            <ul>
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Art & craft
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=dX8wf5w0tFsjnBp0&amp;list=PLECBBM7I0kSVf7N3OTRTGyvMi-Snsf9w9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Child Development
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=Z0Smh0AdA07X4xDx&amp;list=PLzB0sAh2TktBPHhB58PAiEh-H8A4rKbfp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Epidemics
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/Jd3gFT0-C4s?si=Uc_wz1Z2lXQ-1vCJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Human Anatomy 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=mJl7tlq8msAZvMz4&amp;list=PLk3zILm6mXo6-RxkixhRBs7zR7LL1TwDH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+        
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Psychology 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=omJa6yxB2LkWXCua&amp;list=PLkKvotUGCyLeSDxODsglLJ0ET5PJ8K7e2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Public Speaking 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=wYEYOco5mgUxU3xN&amp;list=PLSnPZxJoBf9OZl_nuB6pcxSX5e2qOd-20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Shakespeare
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/bDpW1sHrBaU?si=CCedouwp5V2BcyuF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>Marketing courses</i></h2>
+            <img src="images/marketing.jpeg" alt="Marketing Courses">
+            <ul>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Branding 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/LwrGSKnShmk?si=HIjdL-tvExobFeP6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Brand Engagement 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/FM6oapIrIoc?si=pygy7SrGSba4jy0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Content Marketing 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/0R_3iarc8IA?si=xXkWi-UazNBZh2t6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Digital Marketing
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/bixR-KIJKYM?si=GxESQOHotH9SdtwR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Growth Marketing
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/MKO_CjDZDUQ?si=hZL5Hjb04F2XEGeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Marketing Analytics
+                 </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=FcIKiyQ8h6eT8-lD&amp;list=PLNLDEHOJTZSiTXu-VIkb8JA0NrQ_5O81D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>Mathematics courses</i></h2>
+            <img src="images/mathematics.jpeg" alt="Mathematics courses">
+            <ul>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Algebra 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/GAN-jgzYsIo?si=jPIaqbszV_cu5rQR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Calculus
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=JKt0nWyMLJUAh-Ir&amp;list=PLHXZ9OQGMqxfT9RMcReZ4WcoVILP4k6-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Differential Equations 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=O2P0zkYqDP4YacKI&amp;list=PLROOIV7hGpZhcAsQCpElk7N7zR-NLACQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Discrete Math
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=LeEYxJ7PhkuL01ZR&amp;list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Geometry
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=P1Blulo67ZozRoXl&amp;list=PLP0dNb4-MR2LhzKweiu2Y4b4Urrulo72_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Linear Algebra
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=hHlFXXK5QwENKF5G&amp;list=PLHXZ9OQGMqxfUl0tcqPNTJsb7R6BqSLo6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    Matrix Math
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=IrGXi8i4MXcO8thc&amp;list=PLi5giWKc4eO1G8oX3ft8ZuLQr4Y4idgng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2><i>language and communication </i></h2>
+            <img src="images/lang & commu.jpeg" alt="language and communication">
+            <ul>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    english language learning(spoken english)
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=sNAGBk8HLwtvfwgw&amp;list=PLAX41TUzaphC09B9HFfEqOkwBqCk1yE9v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    creative writing
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=znyAwGRGy1_5HhQa&amp;list=PLSH_xM-KC3Zv-79sVZTTj-YA6IAqh8qeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    public speaking 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=qP5c-LtF60SJ1Nzb&amp;list=PLLy_2iUCG87Dz7sxcJrCV2xbjw-x46g7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <li  class="course-title" style="cursor: pointer; color: #6F4E37; text-decoration: underline;">
+                    translation & interpretation 
+                </li>
+                <div class="video-container" style="display: none; margin-top: 10px;">
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?si=Gv0JbR5DcZVTsSjj&amp;list=PLyQOhfgRQAKZLbVuZ8bL3BTHVlCTDlagB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+            </ul>
+        </div> 
+</div>
+<script src="script.js"></script>
+</body>
+</html> 

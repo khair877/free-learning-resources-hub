@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Free Learning Resources Hub</title>
+  <style>
+    body {
+        font-family: 'Raleway', sans-serif;
+        background: url('images/resobg.jpeg') no-repeat center center/cover;
+        background-attachment: fixed;
+        color: #1b1b1b;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Navbar styles */
+    .navbar {
+            background-color: rgba(27, 3, 70, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+    
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+    
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+        }
+    
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background-color: #ffcb05;
+            transition: width 0.3s ease;
+        }
+    
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    
+
+    .auth-buttons {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .auth-buttons button {
+      background-color: #6f4f37; /* Brown */
+      color: #fff;
+      padding: 8px 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .auth-buttons button:hover {
+      background-color: #8d6e46; /* Lighter Brown */
+    }
+
+    /* Main content styling */
+    section.resources h2 {
+      text-align: center;
+      color: #29066b;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      padding-top: 60px; /* To prevent overlap with navbar */
+    }
+
+    .resources-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .resource-box {
+      flex: 1 1 300px;
+      background-color: #6F4E37;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #f8f1e5;
+    }
+
+    .resource-box h3 {
+      color: #ffcb05;
+    }
+
+    .resource-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .resource-box ul li {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    .resource-box ul li a {
+      color: #f8f1e5;
+      text-decoration: none;
+    }
+
+    .resource-box ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .resource-box {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Additional styles for scroll and navbar */
+    body.scrolled .navbar {
+      background-color: #1e004d; /* Darker shade on scroll */
+    }
+
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="home.html">🏠 Home</a></li>
+          <li><a href="index.html">📚 Courses</a></li>
+          <li><a href="resources.html">📂 Resources</a></li>
+          <li><a href="tools.html">🛠 Tools</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button onclick="window.location.href='signin.html'">Create Account / Sign In</button>
+        </div>
+    </nav>
+
+  <!-- Main content -->
+  <section class="resources">
+    <h2>🌐 Featured Free Learning Resources</h2>
+    <div class="resources-container">
+      <div class="resource-box">
+        <h3>🎓 Courses & MOOCs</h3>
+        <ul>
+          <li><a href="https://coursera.org" target="_blank">Coursera</a> – University courses (free to audit)</li>
+          <li><a href="https://edx.org" target="_blank">edX</a> – Free Harvard/MIT courses</li>
+          <li><a href="https://futurelearn.com" target="_blank">FutureLearn</a> – UK university short courses</li>
+          <li><a href="https://learn.saylor.org/" target="_blank">Saylor Academy</a> – Free college-level courses</li>
+          <li><a href="https://www.open.edu/openlearn/" target="_blank">OpenLearn</a> – Courses by Open University</li>
+        </ul>
+      </div>
+      <div class="resource-box">
+        <h3>👨‍💻 Programming & Tech</h3>
+        <ul>
+          <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a> – Web dev + certifications</li>
+          <li><a href="https://www.theodinproject.com" target="_blank">The Odin Project</a> – Full-stack web dev</li>
+          <li><a href="https://cs50.harvard.edu/x/" target="_blank">CS50 by Harvard</a> – Computer science for all</li>
+          <li><a href="https://www.khanacademy.org/computing" target="_blank">Khan Academy</a> – CS & coding basics</li>
+          <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a> – Web dev tutorials</li>
+        </ul>
+      </div>
+      <div class="resource-box">
+        <h3>📚 Free eBooks</h3>
+        <ul>
+          <li><a href="https://openstax.org" target="_blank">OpenStax</a> – Free college textbooks</li>
+          <li><a href="https://www.gutenberg.org" target="_blank">Project Gutenberg</a> – 70,000+ classic books</li>
+          <li><a href="https://www.pdfdrive.com" target="_blank">PDFDrive</a> – Search academic eBooks</li>
+          <li><a href="http://libgen.rs/" target="_blank">Library Genesis</a> – Free academic PDFs</li>
+        </ul>
+      </div>
+      <div class="resource-box">
+        <h3>🧪 Science & Math</h3>
+        <ul>
+          <li><a href="https://ocw.mit.edu" target="_blank">MIT OCW</a> – Lecture notes, exams, and videos</li>
+          <li><a href="https://khanacademy.org" target="_blank">Khan Academy</a> – Math and science mastery</li>
+          <li><a href="https://brilliant.org" target="_blank">Brilliant</a> – Logic & problem solving</li>
+        </ul>
+      </div>
+      <div class="resource-box">
+        <h3>🎨 Creative & Media</h3>
+        <ul>
+          <li><a href="https://www.canva.com/learn/" target="_blank">Canva Design School</a> – Learn graphic design</li>
+          <li><a href="https://pixlr.com/academy/" target="_blank">Pixlr Academy</a> – Free photo editing guides</li>
+          <li><a href="https://creatoracademy.youtube.com/" target="_blank">YouTube Creator Academy</a> – Grow your channel</li>
+        </ul>
+      </div>
+      <div class="resource-box">
+        <h3>💼 Career & Digital Skills</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/learning/" target="_blank">LinkedIn Learning</a> – Free featured videos</li>
+          <li><a href="https://academy.hubspot.com/" target="_blank">HubSpot Academy</a> – Sales & marketing</li>
+          <li><a href="https://learndigital.withgoogle.com/digitalgarage" target="_blank">Google Digital Garage</a> – Skills for work</li>
+          <li><a href="https://www.coursera.org/career-academy" target="_blank">Coursera Career Academy</a> – Career learning paths</li>
+        </ul>
+      </div>
+      <div class="resource-box">
+        <h3>🛠 Learning Tools</h3>
+        <ul>
+          <li><a href="https://www.grammarly.com" target="_blank">Grammarly</a> – Grammar & spell checker</li>
+          <li><a href="https://quillbot.com" target="_blank">QuillBot</a> – AI paraphraser</li>
+          <li><a href="https://www.desmos.com/" target="_blank">Desmos</a> – Graphing calculator</li>
+          <li><a href="https://www.notion.so/" target="_blank">Notion</a> – All-in-one productivity tool</li>
+          <li><a href="https://www.overleaf.com/" target="_blank">Overleaf</a> – LaTeX editor for academic writing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript for navbar scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

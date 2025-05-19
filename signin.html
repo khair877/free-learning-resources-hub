@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #6f42c1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #1e0548;
+        }
+
+        .toggle-link {
+            color: #6f42c1;
+            cursor: pointer;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sign In Form -->
+        <div id="signin-form">
+            <h2>Sign In</h2>
+            <input type="email" class="input-field" placeholder="Email" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <button class="btn">Sign In</button>
+            <p class="toggle-link" onclick="toggleForm()">Don't have an account? Create one</p>
+        </div>
+
+        <!-- Create Account Form (Initially Hidden) -->
+        <div id="signup-form" style="display: none;">
+            <h2>Create Account</h2>
+            <input type="text" class="input-field" placeholder="Full Name" required>
+            <input type="email" class="input-field" placeholder="Email" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <button class="btn">Create Account</button>
+            <p class="toggle-link" onclick="toggleForm()">Already have an account? Sign in</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const signInForm = document.getElementById("signin-form");
+            const signUpForm = document.getElementById("signup-form");
+    
+            const signInEmail = signInForm.querySelector("input[type='email']");
+            const signInPassword = signInForm.querySelector("input[type='password']");
+            const signInButton = signInForm.querySelector(".btn");
+    
+            const signUpName = signUpForm.querySelector("input[type='text']");
+            const signUpEmail = signUpForm.querySelector("input[type='email']");
+            const signUpPassword = signUpForm.querySelector("input[type='password']");
+            const signUpButton = signUpForm.querySelector(".btn");
+    
+            // Toggle between forms
+            window.toggleForm = () => {
+                const isSignInVisible = signInForm.style.display !== "none";
+                signInForm.style.display = isSignInVisible ? "none" : "block";
+                signUpForm.style.display = isSignInVisible ? "block" : "none";
+            };
+    
+            // Handle Enter key for input fields
+            document.querySelectorAll('.input-field').forEach(input => {
+                input.addEventListener("keypress", event => {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        const parentForm = input.closest("div");
+                        parentForm.querySelector(".btn").click();
+                    }
+                });
+            });
+    
+            // Handle Sign In
+            signInButton.addEventListener("click", () => {
+                const email = signInEmail.value.trim();
+                const password = signInPassword.value.trim();
+    
+                if (!email || !password) {
+                    alert("Please fill in both fields.");
+                    return;
+                }
+    
+                // Simulate sign-in
+                console.log("Signing in:", email);
+                alert(`Signed in as ${email}`);
+            });
+    
+            // Handle Sign Up
+            signUpButton.addEventListener("click", () => {
+                const name = signUpName.value.trim();
+                const email = signUpEmail.value.trim();
+                const password = signUpPassword.value.trim();
+    
+                if (!name || !email || !password) {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+    
+                // Simulate account creation
+                console.log("Creating account for:", name, email);
+                alert(`Account created for ${name}`);
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
